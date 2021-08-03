@@ -1,0 +1,10 @@
+name: CI
+on:
+  - push
+  - pull_request
+jobs:
+  homebrew-macos:
+    runs-on: macos-10.15
+    steps:
+      - run: brew tap lovell/cgif-packaging https://github.com/lovell/cgif-packaging.git
+      - run: brew install --build-bottle lovell/cgif-packaging/cgif
