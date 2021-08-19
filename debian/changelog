@@ -1,0 +1,5 @@
+cgif (PPA_VERSION) focal; urgency=medium
+
+  * Initial release
+
+ -- Lovell Fuller <launchpad@lovell.info>  Wed, 18 Aug 2021 15:35:18 +0100
