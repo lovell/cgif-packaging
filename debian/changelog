@@ -1,4 +1,4 @@
-cgif (PPA_VERSION) focal; urgency=medium
+cgif (PPA_VERSION) UBUNTU_DISTRIBUTION; urgency=medium
 
   * Initial release
 
