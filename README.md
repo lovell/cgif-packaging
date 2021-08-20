@@ -12,12 +12,17 @@ brew tap lovell/cgif-packaging https://github.com/lovell/cgif-packaging.git
 brew install lovell/cgif-packaging/cgif
 ```
 
-## Ubuntu 20.04 LTS (Focal)
+## Ubuntu
 
 To install `cgif` via `apt`:
 
 ```sh
-sudo add-apt-repository ppa:lovell/focal-cgif
+sudo add-apt-repository ppa:lovell/cgif
 sudo apt-get update
 sudo apt-get install libcgif-dev
 ```
+
+Supports:
+
+* 20.04 Focal (LTS)
+* 21.04 Hirsute
