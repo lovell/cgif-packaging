@@ -13,7 +13,7 @@ Rules-Requires-Root: no
 Package: libcgif-dev
 Architecture: any
 Section: libdevel
-Depends: cgif (= ${binary:Version}), ${misc:Depends}
+Depends: libcgif (= ${binary:Version}), ${misc:Depends}
 Description: A fast and lightweight GIF encoder (development files)
 
 Package: libcgif
