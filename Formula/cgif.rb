@@ -1,9 +1,9 @@
 class Cgif < Formula
   desc "A fast and lightweight GIF encoder"
   homepage "https://github.com/dloebl/cgif"
-  url "https://github.com/dloebl/cgif/archive/80bd8fb.tar.gz"
+  url "https://github.com/dloebl/cgif/archive/e698ff1.tar.gz"
   version "0.0.0"
-  sha256 "9437c11ba317a97a723027d446957e3d3825e96d799fa65774984f07b86965fd"
+  sha256 "4130d70311102c1a1b1aa440d3d2cbff26fb5f9e48e7e7275ec50efd2e0bd6c0"
   license "MIT"
 
   bottle :unneeded
