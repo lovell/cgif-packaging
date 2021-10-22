@@ -4,7 +4,24 @@ on:
   - pull_request
 jobs:
   homebrew-macos:
-    runs-on: macos-10.15
+    runs-on: macos-11
     steps:
       - run: brew tap lovell/cgif-packaging https://github.com/lovell/cgif-packaging.git
       - run: brew install --build-bottle lovell/cgif-packaging/cgif
+  deb-ubuntu:
+    runs-on: ubuntu-20.04
+    container: ubuntu:21.10
+    steps:
+      - uses: actions/checkout@v2
+      - run: ln -fs /usr/share/zoneinfo/Europe/London /etc/localtime
+      - run: apt-get update && apt-get install -y dh-make dpkg-dev dput-ng jq
+      - run: LOGNAME=root ./deb.sh focal 0.0.0
+  rpm-fedora:
+    runs-on: ubuntu-20.04
+    container: fedora:34
+    steps:
+      - uses: actions/checkout@v2
+      - run: dnf install -y gcc meson ninja-build rpm-build rpmdevtools rpmlint
+      - run: rpmlint --verbose redhat/libcgif.spec
+      - run: spectool --get-files --sourcedir redhat/libcgif.spec
+      - run: rpmbuild -ba redhat/libcgif.spec
